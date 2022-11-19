@@ -2,9 +2,10 @@
   "name": "blog",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/app.js",
   "scripts": {
-    "start": "nodemon --inspect index.js",
+    "start": "nodemon --inspect src/app.js",
+    "watch": "node-sass --watch src/resources/scss/ --output src/public/css/",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,10 +18,27 @@
     "url": "https://github.com/locht99/nodejs_blog/issues"
   },
   "homepage": "https://github.com/locht99/nodejs_blog#readme",
+  "lint-staged": {
+    "src/**/*.{js,json,scss}": "prettier --single-quote --trailing-comma all --write"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "dependencies": {
-    "express": "^4.18.2"
+    "@popperjs/core": "^2.11.6",
+    "bootstrap": "^5.2.2",
+    "express": "^4.18.2",
+    "express-handlebars": "^6.0.6",
+    "jquery": "^3.6.1"
   },
   "devDependencies": {
-    "nodemon": "^2.0.20"
+    "husky": "^8.0.2",
+    "lint-staged": "^13.0.3",
+    "morgan": "^1.10.0",
+    "node-sass": "^8.0.0",
+    "nodemon": "^2.0.20",
+    "prettier": "^2.7.1"
   }
 }
