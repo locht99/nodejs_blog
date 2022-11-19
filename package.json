@@ -6,7 +6,8 @@
   "scripts": {
     "start": "nodemon --inspect src/app.js",
     "watch": "node-sass --watch src/resources/scss/ --output src/public/css/",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prettier": "lint-staged"
   },
   "repository": {
     "type": "git",
@@ -20,11 +21,6 @@
   "homepage": "https://github.com/locht99/nodejs_blog#readme",
   "lint-staged": {
     "src/**/*.{js,json,scss}": "prettier --single-quote --trailing-comma all --tab-width --write"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
   },
   "dependencies": {
     "@popperjs/core": "^2.11.6",
