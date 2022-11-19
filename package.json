@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/locht99/nodejs_blog#readme",
   "lint-staged": {
-    "src/**/*.{js,json,scss}": "prettier --single-quote --trailing-comma all --write"
+    "src/**/*.{js,json,scss}": "prettier --single-quote --trailing-comma all --tab-width --write"
   },
   "husky": {
     "hooks": {
